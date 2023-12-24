@@ -19,6 +19,10 @@ class RoomsController < ApplicationController
     @new_message = current_user&.messages&.build(room: @room)
   end
 
+  def get_rooms_data
+    render json: { rooms: Room.all.as_json }
+  end
+
   private
 
   def room_params
