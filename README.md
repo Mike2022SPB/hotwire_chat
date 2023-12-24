@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Список необходимых шагов для полной роботоспособности приложения
 
-Things you may want to cover:
+1. Скачать .zip либо склонировать файлы из этого репозитория
 
-* Ruby version
+2. Выполнить в консоли комманды:
 
-* System dependencies
+`bundle`
 
-* Configuration
 
-* Database creation
+`rails db:create db:migrate db:seed`
 
-* Database initialization
 
-* How to run the test suite
+3. Запустить сервер используя следующую комманду:
 
-* Services (job queues, cache servers, search engines, etc.)
+`bin/dex`
 
-* Deployment instructions
+4. Доступные для обращения эндпоинты:
 
-* ...
+**GET запрос:** [http://localhost:3000/get_rooms_data](http://localhost:3000/get_rooms_data) - получение списка чатов(комнат)
+
+**POST запрос:** [http://localhost:3000/create_message_use_api/37/vfwe](http://localhost:3000/create_message_use_api/37/vfwe) - пример запроса, при наличии 37 id-дишника в таблице Room и текста запрос будет осуществлен.
