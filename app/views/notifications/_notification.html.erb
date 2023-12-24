@@ -1,0 +1,7 @@
+<%= turbo_frame_tag dom_id(notification) do %>
+  <div class="border flex-col mt-2 ">
+    <%= notification.room_title %>
+    <%= notification.room_message %>
+  </div>
+  <audio id="ding-audio" src="/sounds/ding.mp3" autoplay></audio>
+<% end %>

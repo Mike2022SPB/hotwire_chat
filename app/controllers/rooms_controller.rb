@@ -9,6 +9,7 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = Room.all
+    @notifications = Notification.all
     @new_room = Room.new
   end
 
